@@ -1,5 +1,5 @@
 # Define variables
-VENV_DIR = venv
+VENV_DIR = .venv
 PYTHON = $(VENV_DIR)/Scripts/python
 PIP = $(VENV_DIR)/Scripts/pip
 REQUIREMENTS = requirements.txt
@@ -21,8 +21,7 @@ install: $(VENV_DIR)/Scripts/activate
 # Run the script
 run: install
 	@echo "Running the script..."
-	@python $(SCRIPT)
-#	@$(PYTHON) $(SCRIPT)
+	@$(PYTHON) $(SCRIPT)
 
 # Clean up the virtual environment
 clean:
